@@ -1,0 +1,17 @@
+.hijau {
+  background-color: #0e8550;
+}
+.navbar-link {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.jumbotron {
+  padding: 2rem 1rem;
+  background-image: url(assets/bghero.png);
+  background-size: cover;
+  height: 100%;
+}
+
+.font-hijau {
+  background-color: #0e8550;
+}
