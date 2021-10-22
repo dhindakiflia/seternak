@@ -29,7 +29,7 @@
   <!-- Navbar -->
 
 <!-- Jumbotron -->
-<section id="jumbotron" class="jumbotron" style="padding-top:150px;padding-bottom:100px" class="img-fluid">
+<section id="jumbotron_home" class="jumbotron" style="padding-top:150px;padding-bottom:100px" class="img-fluid">
 <div class="container">
   <div class="row">
     <div id="hero" class="col-md-4" style="margin-left:190px" >
@@ -69,39 +69,39 @@
 
 
 <!-- bagaimanahijau -->
-<section id="bagaimana" class="hijau">
-    <br><br><br>
-    <div class="container">
-        <div class="row mb-4">
-            <div class="col text-center">
-                <h2 class="text-light mb-4">Bagaimana Seternak Membantu Bisnismu</h2>
+    <section id="bagaimana" class="hijau">
+        <br><br><br>
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col text-center">
+                    <h2 class="text-light mb-4">Bagaimana Seternak Membantu Bisnismu</h2>
+                </div>
+            </div>
+            <div class="row text-center text-light">
+                <div class="col-md-3 mb-4 px-4">
+                    <img src="assets/marketplace.png" alt="">
+                    <h5>Marketplace</h5>
+                    <p>Menghubungkan peternak ayam dengan bisnis olahan ayam</p>
+                </div>
+                <div class="col-md-3 mb-4 px-4">
+                    <img src="assets/mentoring.png" alt="">
+                    <h5>Mentoring</h5>
+                    <p>Pakar ternak ayam dan pengelola peternakan handal ayam</p>
+                </div>
+                <div class="col-md-3 mb-4 px-4">
+                    <img src="assets/forum.png" alt="">
+                    <h5>Forum</h5>
+                    <p>Media interaktif yang memungkinkan peternak ayam di desa terhubung dan berkomunikasi secara online</p>
+                </div>
+                <div class="col-md-3 mb-4 px-4">
+                    <img src="assets/info.png" alt="">
+                    <h5>Info</h5>
+                    <p>Informasi trivia peternakan di Sumatera Barat</p>
+                </div>
             </div>
         </div>
-        <div class="row text-center text-light">
-            <div class="col-md-3 mb-4 px-4">
-                <img src="assets/marketplace.png" alt="">
-                <h5>Marketplace</h5>
-                <p>Menghubungkan peternak ayam dengan bisnis olahan ayam</p>
-            </div>
-            <div class="col-md-3 mb-4 px-4">
-                <img src="assets/mentoring.png" alt="">
-                <h5>Mentoring</h5>
-                <p>Pakar ternak ayam dan pengelola peternakan handal ayam</p>
-            </div>
-            <div class="col-md-3 mb-4 px-4">
-                <img src="assets/forum.png" alt="">
-                <h5>Forum</h5>
-                <p>Media interaktif yang memungkinkan peternak ayam di desa terhubung dan berkomunikasi secara online</p>
-            </div>
-            <div class="col-md-3 mb-4 px-4">
-                <img src="assets/info.png" alt="">
-                <h5>Info</h5>
-                <p>Informasi trivia peternakan di Sumatera Barat</p>
-            </div>
-        </div>
-    </div>
-    <br><br>
-</section>
+        <br><br>
+    </section>
 <!-- bagaimanahijauend -->
 
 <!-- slider -->
@@ -428,14 +428,7 @@
 
 
 <!-- Ayo Bergabung Dengan Kami -->
-<section class="bergabung" style="background-image: url(assets/bergabung.png); background-size: cover;
-  height: 100%; padding: 2rem 1rem;" class="img-fluid">
-  <h1 class="display-6 text-light bold fw-bold text-center" class="responsive-font-example">Ayo Bergabung Dengan Kami</h1>
-   <div class="d-flex justify-content-center mt-4">
-        <button type="button" class="btn btn-light mx-1 text-success">Daftar</button>
-        <button type="button" class="btn btn-success mx-1 hijau">Masuk</button>
-  </div>
-</section>
+<?php include('layout/ayobergabung.php'); ?>
 <!-- Ayo bergabung end -->
 
 <!-- Footer -->
@@ -469,8 +462,8 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script> 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" ></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/script.js"></script>
+	<!-- <script src="js/owl.carousel.min.js"></script>
+	<script src="js/script.js"></script> -->
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
