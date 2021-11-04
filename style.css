@@ -10,6 +10,10 @@
   margin-right: 30px;
 }
 
+.bd-example {
+  position: relative;
+}
+
 #jumbotron_home {
   background-image: url(assets/bghero.png);
 }
