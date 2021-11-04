@@ -33,7 +33,7 @@
 
     <!-- Jumbotron -->
         <section class="jumbotron_about" class="jumbotron" style="padding-top:150px;padding-bottom:100px" class="img-fluid">
-            <div class="container">
+            <div class="container fluid">
             <div class="row">
                 <div id="hero" class="col-md-8 px-4" style="margin-left:190px" >
                     <h1 class="display-4 text-light bold fw-bold" class="responsive-font-example">Apa itu Seternak</h1>
@@ -51,9 +51,18 @@
 
     <!-- Siapa Ambyar -->
     <section class="my-4">
-        <div class="container">
-            <div class="row">
-                <div class="col"></div>
+        <div class="container pb-4">
+            <div class="row text-center pt-4">
+                <div class="col font-hijau">
+                    <h1>
+                    Siapa itu Ambyar
+                    </h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                    <div class="col-md-6 text-center py-4">
+                        <p>Ambyar adalah akronim dari Anak Muda Berbudaya dan Berkarya, sekumpulan muda mudi yang menyamakan visi untuk memanfaatkan perhelatan kebudayaan lokal sebagai bentuk pengabdian terhadap pemajuan kebudayaan lewat perlombaan Kemah Budaya Kaum Muda. </p>
+                    </div>
             </div>
             <div class="row d-flex justify-content-center text-center">
                 <div class="col-lg-2 col-md-6">
