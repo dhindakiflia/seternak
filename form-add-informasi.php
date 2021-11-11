@@ -1,7 +1,7 @@
 <?php
 include 'koneksi.php';
-$id_forum=$_GET['id_forum'];
-$query=pg_query("SELECT * FROM forum WHERE id_forum='$id_forum'");
+$id_info=$_GET['id_info'];
+$query=pg_query("SELECT * FROM informasi WHERE id_info='$id_info'");
 $pecah=pg_fetch_assoc($query);
 ?>
 
@@ -42,41 +42,53 @@ $pecah=pg_fetch_assoc($query);
 
    <div class="container-lg mt-5">
 
-    <form action="function/show-diskusi.php" method="post" enctype="multipart/form-data">
+    <form action="function/add-informasi.php" method="post" enctype="multipart/form-data">
 
     <div class="row">
         <div class="col-md-12 mt-5 mb-5">
           <div class="card shadow-sm bg-body rounded">
             <div class="card-header shadow-sm bg-body rounded" style="background-color: white;">
-              <div class="card-title ps-3 fw-bold">Form Detail Forum</div>
+              <div class="card-title ps-3 fw-bold">Form  Tambah Informasi</div>
             </div>
             <div class="card-body">
               <div class="row">
                     <div class="mb-3 pe-5 ps-5">
-                    <label for="id_forum" class="form-label">ID Forum</label>
-                    <input type="text" class="form-control" id="id_forum" name="id_forum"  value="<?php echo $pecah['id_forum']; ?>" disabled>
+                    <label for="id_info" class="form-label">ID Informasi</label>
+                    <input type="text" class="form-control" id="id_info" name="id_info"  value="<?php echo $pecah['id_info']; ?>" >
                     </div>
 
                     <div class="mb-3 pe-5 ps-5">
-                    <label for="nama_forum" class="form-label">Judul</label>
-                    <input type="text" class="form-control" id="nama_forum" name="nama_forum"  value="<?php echo $pecah['nama_forum'] ?>" disabled>
+                    <label for="judul_info" class="form-label">Judul Informasi</label>
+                    <input type="text" class="form-control" id="judul_info" name="judul_info"  value="<?php echo $pecah['judul_info'] ?>">
                     </div>
 
                     <div class="mb-3 pe-5 ps-5">
-                    <label for="nip" class="form-label">Link WhatsApp</label>
-                    <input type="url" class="form-control" id="link" name="link"  value="<?php echo $pecah['link'] ?>" disabled>
+                    <label for="author" class="form-label">Author</label>
+                    <input type="text" class="form-control" id="author" name="author"  value="<?php echo $pecah['judul_info'] ?>">
                     </div>
 
                     <div class="mb-3 pe-5 ps-5">
-                    <label for="deskripsi_forum" class="form-label">Deskripsi Forum</label>
-                    <textarea class="form-control" id="deskripsi_forum" name="deskripsi_forum" rows="3" disabled ><?php echo $pecah['deskripsi_forum'] ?></textarea>
+                    <label for="abstrak" class="form-label">Abstrak Informasi</label>
+                    <p class="text-black-50">*Maksimal 150 karakter </p>
+                    <input type="text" class="form-control" id="abstrak" name="abstrak" maxlength="150"  value="<?php echo $pecah['abstrak'] ?>">
+                    </div>
+
+                    <div class="mb-3 pe-5 ps-5">
+                    <label for="deskripsi_info" class="form-label">Deskripsi Informasi</label>
+                    <textarea class="form-control" id="deskripsi_info" name="deskripsi_info" rows="20" ><?php echo $pecah['deskripsi_info'] ?></textarea>
+                    </div>
+
+                    <div class="mb-3 pe-5 ps-5">
+                    <label for="foto" class="form-label">Gambar</label>
+                    <input type="file" class="form-control" name="foto" id="foto" >
+                    <!-- <textarea class="form-control" id="foto" name="foto" rows="3" ><?php echo $pecah['foto'] ?></textarea> -->
                     </div>
               </div>
 
               
-              <!-- <div class="field" style="display: flex; justify-content: flex-start; padding: 1rem; margin-left:1rem;">
+              <div class="field" style="display: flex; justify-content: flex-start; padding: 1rem; margin-left:1rem;">
                   <button type="submit" name="edit" class="btn btn-success ps-4 pe-4">Submit</button>
-              </div> -->
+              </div>
 
 
             </div>
@@ -86,8 +98,8 @@ $pecah=pg_fetch_assoc($query);
 
   </div>
 
-    <!-- Footer -->
-    <?php include('layout/admin-footer.php'); ?>
-    <!-- Footer end -->
+  <!-- Footer -->
+<?php include('layout/admin-footer.php'); ?>
+<!-- Footer end -->
 
   </body>

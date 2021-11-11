@@ -2,13 +2,14 @@
         <br><br>
         <div class="container-md">
             <div class="row text-light">
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <img src="assets/logop.jpg" alt="" style="weight:40px;height:40px">
                 </div>
-                <div id="ifoot" class="col-sm-2 pt-3 text-end">Ahli</div>
-                <div id="ifoot" class="col-sm-2 pt-3 text-end">Diskusi</div>
-                <div id="ifoot" class="col-sm-2 pt-3 text-end">Informasi</div>
-                <div id="ifoot" class="col-sm-2 pt-3 text-end">Manage User</div>
+                <div id="ifoot" class="col-sm-2 pt-3 text-end">Produk Saya</div>
+                <div id="ifoot" class="col-sm-2 pt-3 text-end">Tanya Ahli</div>
+                <div id="ifoot" class="col-sm-2 pt-3 text-end">Diskusi
+                    <a href="#"></a>
+                </div>
             </div>
             <hr class="my-2 text-light">
             <div class="row text-light mb-2">

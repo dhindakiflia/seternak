@@ -1,3 +1,6 @@
+<?php
+ include 'koneksi.php';
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,7 +11,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
     <!-- owl caurasl min.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -335,19 +338,27 @@
 <section id="tahukahkamu">
     <br><br>
     <div class="container text-start">
-        <h1 class="mb-4 text-center">Tahukah Kamu</h1>
+        <h1 class="mb-4 text-center font-hijau">Tahukah Kamu</h1>
         <div class="row">
             <div class="owl-carousel owl-theme">
+                <?php
+                    $ambil = pg_query($conn,"SELECT * FROM informasi");
+                    while ($pecah = pg_fetch_array($ambil)){
+                ?>
                 <div id="item" class="item ">
                     <div class="card shadow-sm" style="width: 15rem;">
-                        <img src="assets/fakta1.jpg" class="card-img-top" alt="...">
+                        <img src="assets/informasi/<?php echo $pecah['foto']; ?>" class="card-img-top" alt="..."  width="300px"  height="150px">
                         <div class="card-body">
-                            <h5 class="card-title text-start font-hijau">Fakta Anak Ayam</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h5 class="card-title text-start font-hijau"><?php echo $pecah['judul_info']; ?></h5>
+                            <p class="card-text"><?php echo $pecah['abstrak']; ?></p>
+                            <a href="detail-info.php?id_info=<?php echo $pecah['id_info'];?>" class="stretched-link"></a>
                         </div>
                     </div>
                 </div>
-                <div id="item" class="item ">
+                <?php
+                    }
+                ?>
+                <!-- <div id="item" class="item ">
                     <div class="card shadow-sm" style="width: 15rem;">
                         <img src="assets/fakta2.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -373,7 +384,7 @@
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -385,7 +396,7 @@
 
 <!-- FAQ -->
 <section class="faq p-4" >
-  <h1 class=" mb-5  text-center" class="responsive-font-example">Frequently Asked Questions</h1>
+  <h1 class=" mb-5  text-center font-hijau" class="responsive-font-example">Frequently Asked Questions</h1>
   <div class="container accordion accordion-flush justify-content-center " id="accordionFlushExample" style="max-width: 50rem;">
 
   <div class="accordion-item mb-3 shadow mb-3 bg-white rounded">
@@ -461,7 +472,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script> 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" ></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" ></script> -->
 	<!-- <script src="js/owl.carousel.min.js"></script>
 	<script src="js/script.js"></script> -->
     <!-- jquery -->

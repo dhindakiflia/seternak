@@ -48,11 +48,11 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col">
-                                    <div class="card-title mt-4 font-hijau"><h5>Tabel Daftar Forum</h5></div>
+                                    <div class="card-title mt-4 font-hijau"><h5>Tabel Daftar Informasi</h5></div>
                                 </div>
                                 <div class="col d-flex align-items-center flex-row-reverse me-3 mt-3">
                                 <button class="btn btn-success btn-round ml-auto" data-toggle="modal">
-                                    <i class="bi bi-plus"><a href="form-add-diskusi.php" class="button is-success" style="color:white !important; text-decoration:none;"></i>Tambah Ahli</a>
+                                    <i class="bi bi-plus"><a href="form-add-informasi.php" class="button is-success" style="color:white !important; text-decoration:none;"></i>Tambah Informasi</a>
                                 </button>
                                 </div>
                             </div>
@@ -61,26 +61,28 @@
                                     <table class="table table-hover table-responsive">
                                         <thead class="bg-light.bg-gradient">
                                             <tr class="bg-light">
-                                                <th scope="col">Nama Forum</th>
-                                                <th scope="col">Link</th>
-                                                <th scope="col">Deskripsi Forum</th>
+                                                <th scope="col">Judul Informasi</th>
+                                                <th scope="col">Tanggal Dibuat</th>
+                                                <th scope="col">Author</th>
+                                                <th scope="col">Abstrak</th>
                                                 <th scope="col" style="width:15%;">Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                         <?php
                                             $i=0;
-                                            $ambil = pg_query($conn,"SELECT * FROM forum");
+                                            $ambil = pg_query($conn,"SELECT * FROM informasi");
                                             while ($pecah = pg_fetch_array($ambil)){
                                         ?>
                                             <tr>
-                                                <th scope="row"><?php echo $pecah['nama_forum']; ?></td>
-                                                <td><?php echo $pecah['link']; ?></td>
-                                                <td><?php echo $pecah['deskripsi_forum']; ?></td>
+                                                <th scope="row"><?php echo $pecah['judul_info']; ?></td>
+                                                <td><?php echo $pecah['tanggal_info']; ?></td>
+                                                <td><?php echo $pecah['author']; ?></td>
+                                                <td><?php echo $pecah['abstrak']; ?></td>
                                                 <td>
-                                                    <a  href="form-show-diskusi.php?id_forum=<?php echo $pecah['id_forum'];?>"><span class="btn btn-success bi bi-search font-hijau"></span></a>
-                                                    <a  href="form-edit-diskusi.php?id_forum=<?php echo $pecah['id_forum'];?>" ><span class="btn btn-success bi bi-pencil-square font-hijau"></span></a>
-                                                    <a  href="function/delete-diskusi.php?id_forum=<?php echo $pecah['id_forum'];?>" ><span class="btn btn-success bi bi-trash font-hijau"></span></a>
+                                                    <a  href="form-show-informasi.php?id_info=<?php echo $pecah['id_info'];?>"><span class="btn btn-success bi bi-search font-hijau"></span></a>
+                                                    <a  href="form-edit-informasi.php?id_info=<?php echo $pecah['id_info'];?>" ><span class="btn btn-success bi bi-pencil-square font-hijau"></span></a>
+                                                    <a  href="function/delete-informasi.php?id_info=<?php echo $pecah['id_info'];?>" ><span class="btn btn-success bi bi-trash font-hijau"></span></a>
                                                 </td>
                                             </tr>
                                         <?php

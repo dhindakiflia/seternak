@@ -13,9 +13,12 @@
         echo "<script>
         alert ('Data Successfully Added');
         </script>";
+        header("location:../index-diskusi.php?berhasil=no");
     }else{
         echo "<script>
         alert ('Error');
         </script>";
+        header("location:../index-diskusi.php?berhasil=no");
+
     }
 ?>
