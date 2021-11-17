@@ -86,4 +86,8 @@ $pecah=pg_fetch_assoc($query);
 
   </div>
 
+    <!-- Footer -->
+    <?php include('layout/admin-footer.php'); ?>
+    <!-- Footer end -->
+
   </body>

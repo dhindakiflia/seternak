@@ -10,10 +10,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ">
-            <a class="mx-4 nav-link text-light " aria-current="page" href="index.php#home">Ahli</a>
-            <a class="mx-4 nav-link  text-light" href="index-informasi.php">Informasi</a>
-            <a class="mx-4 nav-link text-light" href="index-diskusi.php">Forum</a>
-            <a class="mx-4 nav-link text-light" href="tentangkami.php">Manage User</a>
+            <a class="mx-4 nav-link text-light " aria-current="page" href="index.php#home">Produk Saya</a>
+            <a class="mx-4 nav-link  text-light" href="index-tanya-ahli.php">Tanya Ahli</a>
+            <a class="mx-4 nav-link text-light" href="index-forum.php">Diskusi</a>
         </div>
             <div id="bdm" class="ms-auto">
                 <a class="mx-4 nav-link  text-light" href="#">Hi, <?php  ?><i class="bi bi-caret-down-fill"></i></a>
