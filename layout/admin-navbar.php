@@ -1,3 +1,4 @@
+
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark hijau shadow fixed-top">
     <div class="container">
@@ -5,14 +6,15 @@
             <img src="assets/logop.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ">
-                <a class="mx-4 nav-link text-light " aria-current="page" href="index-ahli.php">Ahli</a>
-                <a class="mx-4 nav-link  text-light" href="index.php#tahukahkamu">Diskusi</a>
-                <a class="mx-4 nav-link text-light" href="tentangkami.php">Informasi</a>
-                <a class="mx-4 nav-link text-light" href="tentangkami.php">Manage User</a>
+                  <a class="mx-4 nav-link text-light " aria-current="page" href="index-ahli.php">Ahli</a>
+                  <a class="mx-4 nav-link  text-light" href="index-informasi.php">Informasi</a>
+                  <a class="mx-4 nav-link text-light" href="index-diskusi.php">Forum</a>
+                  <a class="mx-4 nav-link text-light" href="#">Manage User</a>
             </div>
             <div id="bdm" class="ms-auto">
                 <ul class="navbar-nav ">
@@ -23,13 +25,11 @@
 
 
                         <ul class="dropdown-menu dropdown-menu-dark" style="background-color: #0e8550;" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item" href="form-edit-profile.php">Profile</a></li>
+                            <li><a class="dropdown-item" href="index-profile-admin.php?username=<?php echo $username?>">Profile</a></li>
                             <li><a class="dropdown-item" href="#">Logout</a></li>
                         </ul>
                     </li>
                 </ul>
-
-
 
 
             </div>

@@ -33,7 +33,7 @@
 
     <!-- Jumbotron -->
         <section class="jumbotron_about" class="jumbotron" style="padding-top:150px;padding-bottom:100px" class="img-fluid">
-            <div class="container">
+            <div class="container fluid">
             <div class="row">
                 <div id="hero" class="col-md-8 px-4" style="margin-left:190px" >
                     <h1 class="display-4 text-light bold fw-bold" class="responsive-font-example">Apa itu Seternak</h1>
@@ -51,9 +51,18 @@
 
     <!-- Siapa Ambyar -->
     <section class="my-4">
-        <div class="container">
-            <div class="row">
-                <div class="col"></div>
+        <div class="container pb-4">
+            <div class="row text-center pt-4">
+                <div class="col font-hijau">
+                    <h1>
+                    Siapa itu Ambyar
+                    </h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                    <div class="col-md-6 text-center py-4">
+                        <p>Ambyar adalah akronim dari Anak Muda Berbudaya dan Berkarya, sekumpulan muda mudi yang menyamakan visi untuk memanfaatkan perhelatan kebudayaan lokal sebagai bentuk pengabdian terhadap pemajuan kebudayaan lewat perlombaan Kemah Budaya Kaum Muda. </p>
+                    </div>
             </div>
             <div class="row d-flex justify-content-center text-center">
                 <div class="col-lg-2 col-md-6">
@@ -115,7 +124,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script> 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" ></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" ></script> -->
 	<!-- <script src="js/owl.carousel.min.js"></script>
 	<script src="js/script.js"></script> -->
     <!-- jquery -->
