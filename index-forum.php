@@ -22,6 +22,13 @@
 
 
     <title>Seternak</title>
+
+    <style>
+      .card:hover{
+            box-shadow: 8px 8px 5px ;    
+            transform: scale(1.01);
+        }
+    </style>
   </head>
   <body id="home">
 

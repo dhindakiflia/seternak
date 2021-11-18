@@ -48,7 +48,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col">
-                                    <div class="card-title mt-4 font-hijau"><h5>Tabel Daftar Informasi</h5></div>
+                                    <div class="card-title ms-3 mt-4 font-hijau"><h5>Tabel Daftar Informasi</h5></div>
                                 </div>
                                 <div class="col d-flex align-items-center flex-row-reverse me-3 mt-3">
                                 <button class="btn btn-success btn-round ml-auto" data-toggle="modal">
@@ -76,7 +76,7 @@
                                         ?>
                                             <tr>
                                                 <th scope="row"><?php echo $pecah['judul_info']; ?></td>
-                                                <td><?php echo $pecah['tanggal_info']; ?></td>
+                                                <td><?php echo date('d F, Y ',strtotime($pecah['tgl_info'])); ?></td>
                                                 <td><?php echo $pecah['author']; ?></td>
                                                 <td><?php echo $pecah['abstrak']; ?></td>
                                                 <td>

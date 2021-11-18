@@ -53,23 +53,23 @@ $pecah=pg_fetch_assoc($query);
             <div class="card-body">
               <div class="row">
                     <div class="mb-3 pe-5 ps-5">
-                    <label for="id_forum" class="form-label">ID Forum</label>
-                    <input type="text" class="form-control" id="id_forum" name="id_forum"  value="<?php echo $pecah['id_forum']; ?>" disabled>
+                    <!-- <label for="id_forum" class="form-label">ID Forum</label> -->
+                    <input type="hidden" class="form-control" id="id_forum" name="id_forum"  value="<?php echo $pecah['id_forum']; ?>" required>
                     </div>
 
                     <div class="mb-3 pe-5 ps-5">
                     <label for="nama_forum" class="form-label">Judul</label>
-                    <input type="text" class="form-control" id="nama_forum" name="nama_forum"  value="<?php echo $pecah['nama_forum'] ?>">
+                    <input type="text" class="form-control" id="nama_forum" name="nama_forum"  value="<?php echo $pecah['nama_forum'] ?>" required>
                     </div>
 
                     <div class="mb-3 pe-5 ps-5">
                     <label for="nip" class="form-label">Link WhatsApp</label>
-                    <input type="url" class="form-control" id="link" name="link"  value="<?php echo $pecah['link'] ?>">
+                    <input type="url" class="form-control" id="link" name="link"  value="<?php echo $pecah['link'] ?>" required>
                     </div>
 
                     <div class="mb-3 pe-5 ps-5">
                     <label for="deskripsi_forum" class="form-label">Deskripsi Forum</label>
-                    <textarea class="form-control" id="deskripsi_forum" name="deskripsi_forum" rows="3" ><?php echo $pecah['deskripsi_forum'] ?></textarea>
+                    <textarea class="form-control" id="deskripsi_forum" name="deskripsi_forum" rows="3" required ><?php echo $pecah['deskripsi_forum'] ?></textarea>
                     </div>
               </div>
 

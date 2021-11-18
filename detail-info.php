@@ -88,7 +88,7 @@
             <div class="row">
                 <div class="col px-4">
                     <h5 class="fw-bolder font-hijau"><?php echo $pecah['judul_info']; ?></h5>
-                    <h6 class="fw-bolder mb-5"><?php echo $pecah['author']; ?> - <?php $date = date_create($pecah['tanggal_info']); echo date_format($date, 'd/m/Y'); ?></h6>
+                    <h6 class="fw-bolder mb-5"><?php echo $pecah['author']; ?> - <?php $date = date_create($pecah['tgl_info']); echo date_format($date, 'd/m/Y'); ?></h6>
                     <p class="mb-4"><?php echo nl2br($pecah['deskripsi_info']); ?></p>
                     <div class="text-center">
                         <img id="foto-info"  class="rounded-3 p-4 mx-4" src="assets/informasi/<?php echo $pecah['foto']; ?>" width="600px" height="400px">
