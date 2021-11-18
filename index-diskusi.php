@@ -31,7 +31,7 @@
 </head>
 <body id="home">
 
-<section class=:>
+<section >
     <!-- Navbar -->
     <?php 
         include('layout/admin-navbar.php');
@@ -48,11 +48,11 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col">
-                                    <div class="card-title mt-4 font-hijau"><h5>Tabel Daftar Forum</h5></div>
+                                    <div class="card-title mt-4 ms-3 font-hijau"><h5>Tabel Daftar Forum</h5></div>
                                 </div>
                                 <div class="col d-flex align-items-center flex-row-reverse me-3 mt-3">
                                 <button class="btn btn-success btn-round ml-auto" data-toggle="modal">
-                                    <i class="bi bi-plus"><a href="form-add-diskusi.php" class="button is-success" style="color:white !important; text-decoration:none;"></i>Tambah Ahli</a>
+                                    <i class="bi bi-plus"><a href="form-add-diskusi.php" class="button is-success" style="color:white !important; text-decoration:none;"></i>Tambah Forum</a>
                                 </button>
                                 </div>
                             </div>

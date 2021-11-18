@@ -1,8 +1,18 @@
 <?php
 include 'koneksi.php';
-$id_info=$_GET['id_info'];
-$query=pg_query("SELECT * FROM informasi WHERE id_info='$id_info'");
-$pecah=pg_fetch_assoc($query);
+// $id_info=$_GET['id_info'];
+// $query=pg_query("SELECT * FROM informasi WHERE id_info='$id_info'");
+// $pecah=pg_fetch_assoc($query);
+
+function generateRandomString($length = 10) {
+  $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  $charactersLength = strlen($characters);
+  $randomString = '';
+  for ($i = 0; $i < $length; $i++) {
+      $randomString .= $characters[rand(0, $charactersLength - 1)];
+  }
+  return $randomString;
+}
 ?>
 
 <!doctype html>
@@ -54,33 +64,34 @@ $pecah=pg_fetch_assoc($query);
               <div class="row">
                     <div class="mb-3 pe-5 ps-5">
                     <label for="id_info" class="form-label">ID Informasi</label>
-                    <input type="text" class="form-control" id="id_info" name="id_info"  value="<?php echo $pecah['id_info']; ?>" >
+                    <input type="text" class="form-control" readonly id="id_info" name="id_info"  value="<?php echo generateRandomString(8); ?>" required>
                     </div>
 
                     <div class="mb-3 pe-5 ps-5">
                     <label for="judul_info" class="form-label">Judul Informasi</label>
-                    <input type="text" class="form-control" id="judul_info" name="judul_info"  value="<?php echo $pecah['judul_info'] ?>">
+                    <input type="text" class="form-control" id="judul_info" name="judul_info" required >
                     </div>
 
                     <div class="mb-3 pe-5 ps-5">
                     <label for="author" class="form-label">Author</label>
-                    <input type="text" class="form-control" id="author" name="author"  value="<?php echo $pecah['judul_info'] ?>">
+                    <input type="text" class="form-control" id="author" name="author"  required>
                     </div>
 
                     <div class="mb-3 pe-5 ps-5">
                     <label for="abstrak" class="form-label">Abstrak Informasi</label>
                     <p class="text-black-50">*Maksimal 150 karakter </p>
-                    <input type="text" class="form-control" id="abstrak" name="abstrak" maxlength="150"  value="<?php echo $pecah['abstrak'] ?>">
+                    <input type="text" class="form-control" id="abstrak" name="abstrak" maxlength="150" required >
                     </div>
 
                     <div class="mb-3 pe-5 ps-5">
                     <label for="deskripsi_info" class="form-label">Deskripsi Informasi</label>
-                    <textarea class="form-control" id="deskripsi_info" name="deskripsi_info" rows="20" ><?php echo $pecah['deskripsi_info'] ?></textarea>
+                    <textarea class="form-control" id="deskripsi_info" name="deskripsi_info" rows="20" required></textarea>
                     </div>
 
                     <div class="mb-3 pe-5 ps-5">
                     <label for="foto" class="form-label">Gambar</label>
-                    <input type="file" class="form-control" name="foto" id="foto" >
+                    <p class="text-black-50">*Maksimal ukuran gambar : 10MB </p>
+                    <input type="file" class="form-control" name="foto" id="foto" required>
                     <!-- <textarea class="form-control" id="foto" name="foto" rows="3" ><?php echo $pecah['foto'] ?></textarea> -->
                     </div>
               </div>

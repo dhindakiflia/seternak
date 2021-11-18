@@ -18,7 +18,7 @@
     $file_tmp = $_FILES['foto']['tmp_name'];	
 
     if(in_array($ekstensi, $ekstensi_diperbolehkan) === true){
-        if($ukuran < 1044070){			
+        if($ukuran < 1044070000){			
             move_uploaded_file($file_tmp, '../assets/informasi/'.$foto);
             $query = pg_query("INSERT INTO informasi values ('$id_info','$judul_info','$abstrak','$deskripsi_info','$foto','$tanggal','$author')");
             if($query){

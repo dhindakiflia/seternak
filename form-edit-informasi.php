@@ -53,35 +53,36 @@ $pecah=pg_fetch_assoc($query);
             <div class="card-body">
               <div class="row">
               <div class="mb-3 pe-5 ps-5">
-                    <label for="id_info" class="form-label">ID Informasi</label>
-                    <input type="text" class="form-control" id="id_info" name="id_info"  value="<?php echo $pecah['id_info']; ?>" >
+                    <!-- <label for="id_info" class="form-label">ID Informasi</label> -->
+                    <input type="hidden" class="form-control" id="id_info" name="id_info"  value="<?php echo $pecah['id_info']; ?>" required>
                     </div>
 
                     <div class="mb-3 pe-5 ps-5">
                     <label for="judul_info" class="form-label">Judul Informasi</label>
-                    <input type="text" class="form-control" id="judul_info" name="judul_info"  value="<?php echo $pecah['judul_info'] ?>">
+                    <input type="text" class="form-control" id="judul_info" name="judul_info"  value="<?php echo $pecah['judul_info'] ?>" required>
                     </div>
 
                     <div class="mb-3 pe-5 ps-5">
                     <label for="author" class="form-label">Author</label>
-                    <input type="text" class="form-control" id="author" name="author"  value="<?php echo $pecah['author'] ?>">
+                    <input type="text" class="form-control" id="author" name="author"  value="<?php echo $pecah['author'] ?>" required>
                     </div>
 
                     <div class="mb-3 pe-5 ps-5">
                     <label for="abstrak" class="form-label">Abstrak Informasi</label> 
                     <p class="fs-7 text-black-50">*Maksimal 150 karakter </p>
-                    <input type="text" class="form-control" id="abstrak" name="abstrak" maxlength="150"  value="<?php echo $pecah['abstrak'] ?>">
+                    <input type="text" class="form-control" id="abstrak" name="abstrak" maxlength="150"  value="<?php echo $pecah['abstrak'] ?>" required>
                     </div>
 
                     <div class="mb-3 pe-5 ps-5">
                     <label for="deskripsi_info" class="form-label" style="">Deskripsi Informasi</label>
-                    <textarea class="form-control" id="deskripsi_info" name="deskripsi_info" rows="20" ><?php echo $pecah['deskripsi_info'] ?></textarea>
+                    <textarea class="form-control" id="deskripsi_info" name="deskripsi_info" rows="20" required><?php echo $pecah['deskripsi_info'] ?></textarea>
                     </div>
 
                     <div class="mb-3 pe-5 ps-5">
                     <label for="foto" class="form-label"></label>
                     <img src="assets/informasi/<?php echo $pecah['foto']; ?>" alt="" style="width:100px;height: 100px;">
-                    <input type="file" class="form-control" name="foto" id="foto" >
+                    <p class="text-black-50">*Maksimal ukuran gambar : 10MB </p>
+                    <input type="file" class="form-control" name="foto" id="foto" required>
                     <!-- <textarea class="form-control" id="foto" name="foto" rows="3" ><?php echo $pecah['foto'] ?></textarea> -->
                     </div>
               </div>

@@ -28,7 +28,7 @@ if(isset($_POST['edit']))
         {
             if(in_array($fileExt, $allowExt) === true)
             {
-                if($fileSize < 1044070) //untuk mengecek ukuran file
+                if($fileSize < 1044070000) //untuk mengecek ukuran file
                 {			
                     if(move_uploaded_file($fileTemp, '../assets/informasi/'.$foto))
                     {
