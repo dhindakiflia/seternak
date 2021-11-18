@@ -10,6 +10,7 @@ if (isset($_POST['tambah'])) {
   $jabatan = $_POST['jabatan'];
   $contact = $_POST['contact'];
   $deskripsi_ahli = $_POST['deskripsi_ahli'];
+  $profil_singkat = $_POST['profil_singkat'];
 
   //foto
   $foto = $_FILES['foto'] ['name'];
@@ -39,7 +40,7 @@ if (isset($_POST['tambah'])) {
   //jam
   $jam_available = $_POST ['jam_available'];
 
-  $query = pg_query($conn, "INSERT INTO ahli (id_ahli,nama_ahli,nip,jabatan,contact,deskripsi_ahli,foto,video,jam_available) VALUES ('$id_ahli','$nama_ahli','$nip','$jabatan','$contact','$deskripsi_ahli','$foto','$video','$jam_available')");
+  $query = pg_query($conn, "INSERT INTO ahli (id_ahli,nama_ahli,nip,jabatan,contact,deskripsi_ahli,foto,video,jam_available,profil_singkat) VALUES ('$id_ahli','$nama_ahli','$nip','$jabatan','$contact','$deskripsi_ahli','$foto','$video','$jam_available','$profil_singkat')");
   // header('Location: nasabah.php');
 
 

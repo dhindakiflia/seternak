@@ -3,6 +3,8 @@ include ('../koneksi.php');
 
 
 
+
+
 if (isset($_POST['edit'])) {
 // $name = $_POST['name'];
 $name = $_POST['name'];
@@ -18,11 +20,11 @@ $username = $_POST['username'];
   $source = $_FILES ['foto']['tmp_name'];
   $folder = '../upload/';
 
+  $id_pemilik=$_POST['id_pemilik'];
+  $nama_usaha=$_POST['nama_usaha'];
+  $alamat_usaha=$_POST['alamat_usaha'];
 
-
- 
-
-
+	
 
   if($foto != ''){
 
@@ -30,10 +32,12 @@ $username = $_POST['username'];
   
 
     $query = pg_query($conn, "UPDATE public.user SET name='$name', email='$email', password='$password', contact='$contact',kota='$kota', alamat='$alamat', foto='$foto' WHERE username='$username'");
+    $query2 = pg_query($conn, "UPDATE public.mitra SET nama_usaha='$nama_usaha', alamat_usaha='$alamat_usaha' WHERE id_pemilik='$id_pemilik'");
 
   } else {
 
     $query = pg_query($conn, "UPDATE public.user SET name='$name', email='$email', password='$password', contact='$contact',kota='$kota', alamat='$alamat' WHERE username='$username'");
+    $query2 = pg_query($conn, "UPDATE public.mitra SET nama_usaha='$nama_usaha', alamat_usaha='$alamat_usaha' WHERE id_pemilik='$id_pemilik'");
 
 
   }
@@ -52,20 +56,22 @@ $username = $_POST['username'];
 
 
   // }
+ 
+  
 
 
-
-  if ($query) {
+  if ($query && $query2) {
     echo "<script>alert('Data Berhasil Diubah'); </script>";
 
-    header("location:../index-profile-admin.php?username=$username");
+    header("location:../index-profile-mitra.php?username=$username");
   } else {
     echo "<script>alert('Data Gagal Diubah'); </script>";
 
-    header("location:../form-edit-profile-admin.php?username=$username");
+    header("location:../form-edit-profile-mitra.php?username=$username");
   }
 
-  };
+ 
+}
 
 
 

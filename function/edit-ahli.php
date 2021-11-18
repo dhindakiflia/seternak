@@ -9,6 +9,7 @@ $nama_ahli = $_POST['nama_ahli'];
   $jabatan = $_POST['jabatan'];
   $contact = $_POST['contact'];
   $deskripsi_ahli = $_POST['deskripsi_ahli'];
+  $profil_singkat = $_POST['profil_singkat'];
 
   $foto = $_FILES['foto'] ['name'];
   $source = $_FILES ['foto']['tmp_name'];
@@ -29,11 +30,11 @@ $nama_ahli = $_POST['nama_ahli'];
   if($foto != ''){
 
     move_uploaded_file($source,$folder.$foto);
-    $query = pg_query($conn, "UPDATE ahli SET nama_ahli='$nama_ahli', nip='$nip', jabatan='$jabatan', contact='$contact', deskripsi_ahli='$deskripsi_ahli', foto='$foto', jam_available='$jam_available' WHERE id_ahli='$id_ahli'");
+    $query = pg_query($conn, "UPDATE ahli SET nama_ahli='$nama_ahli', nip='$nip', jabatan='$jabatan', contact='$contact', deskripsi_ahli='$deskripsi_ahli', foto='$foto', jam_available='$jam_available', profil_singkat='$profil_singkat' WHERE id_ahli='$id_ahli'");
 
   } else {
 
-    $query = pg_query($conn, "UPDATE ahli SET nama_ahli='$nama_ahli', nip='$nip', jabatan='$jabatan', contact='$contact', deskripsi_ahli='$deskripsi_ahli', jam_available='$jam_available' WHERE id_ahli='$id_ahli'");
+    $query = pg_query($conn, "UPDATE ahli SET nama_ahli='$nama_ahli', nip='$nip', jabatan='$jabatan', contact='$contact', deskripsi_ahli='$deskripsi_ahli', jam_available='$jam_available', profil_singkat='$profil_singkat' WHERE id_ahli='$id_ahli'");
 
 
   }
@@ -53,13 +54,13 @@ $nama_ahli = $_POST['nama_ahli'];
       $pesan = "File Video Terlalu Besar Atau Format Video Salah!";
     }
 
-    $query = pg_query($conn, "UPDATE ahli SET nama_ahli='$nama_ahli', nip='$nip', jabatan='$jabatan', contact='$contact', deskripsi_ahli='$deskripsi_ahli', video='$video', jam_available='$jam_available' WHERE id_ahli='$id_ahli'");
+    $query = pg_query($conn, "UPDATE ahli SET nama_ahli='$nama_ahli', nip='$nip', jabatan='$jabatan', contact='$contact', deskripsi_ahli='$deskripsi_ahli', video='$video', jam_available='$jam_available', profil_singkat='$profil_singkat' WHERE id_ahli='$id_ahli'");
    
   }
   
   else {
 
-    $query = pg_query($conn, "UPDATE ahli SET nama_ahli='$nama_ahli', nip='$nip', jabatan='$jabatan', contact='$contact', deskripsi_ahli='$deskripsi_ahli', jam_available='$jam_available' WHERE id_ahli='$id_ahli'");
+    $query = pg_query($conn, "UPDATE ahli SET nama_ahli='$nama_ahli', nip='$nip', jabatan='$jabatan', contact='$contact', deskripsi_ahli='$deskripsi_ahli', jam_available='$jam_available', profil_singkat='$profil_singkat' WHERE id_ahli='$id_ahli'");
 
 
   }

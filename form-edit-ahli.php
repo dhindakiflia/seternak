@@ -75,11 +75,11 @@
               <div class="row">
                 <div class="mb-3 pe-5 ps-5">
                   <label for="id_ahli" class="form-label">ID Ahli</label>
-                  <input type="text" class="form-control" id="id_ahli" name="id_ahli" value="<?php echo $user_data['id_ahli']; ?>">
+                  <input type="text" class="form-control" id="id_ahli" name="id_ahli" value="<?php echo $user_data['id_ahli']; ?>" readonly>
                 </div>
 
 
-                <div class="row">
+               
                   <div class="mb-3 pe-5 ps-5">
                     <label for="nama_ahli" class="form-label">Nama</label>
                     <input type="text" class="form-control" id="nama_ahli" name="nama_ahli" value="<?php echo $user_data['nama_ahli']; ?>">
@@ -117,6 +117,7 @@
                   <div class="mb-3 pe-5 ps-5">
 
                     <label for="video" class="form-label">Video</label>
+                    <p class="text-black-50">"Min Upload : 5MB & Maks Upload 45MB"</p>
                     <div>
                       <video width="250" height="200" controls>
                         <source src="video_upload/<?php echo $user_data['video']; ?>">
@@ -131,11 +132,20 @@
                     <label for="deskripsi_ahli" class="form-label">Deskripsi Ahli</label>
                     <textarea class="form-control" id="deskripsi_ahli" name="deskripsi_ahli" rows="3"><?php echo $user_data['deskripsi_ahli']; ?></textarea>
                   </div>
+              
+
+                <div class="mb-3 pe-5 ps-5">
+                    <label for="profil_singkat" class="form-label">Profil Singkat</label>
+                    <textarea class="form-control" id="profil_singkat" name="profil_singkat" rows="3"><?php echo $user_data['profil_singkat']; ?></textarea>
+                  </div>
+
                 </div>
 
 
                 <div class="field " style="display: flex; justify-content: flex-start; ">
                   <button type="submit" name="edit" class="btn btn-success ps-4 pe-4">Submit</button>
+                </div>
+
                 </div>
 
 

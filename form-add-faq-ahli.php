@@ -25,6 +25,10 @@
   include('layout/admin-navbar.php');
   include('koneksi.php');
 
+
+
+  $result = pg_query($conn, "SELECT * FROM  ahli");
+
   function generateRandomString($length = 10) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $charactersLength = strlen($characters);
@@ -34,6 +38,9 @@
     }
     return $randomString;
   }
+
+
+  ?>
 
 
   ?>
@@ -58,90 +65,73 @@
 
   <div class="container-lg mt-5">
 
-    <form action="function/add-ahli.php" method="post" enctype="multipart/form-data">
+    <form action="function/add-faq-ahli.php" method="post" enctype="multipart/form-data">
 
       <div class="row">
         <div class="col-md-12 mt-5 mb-5">
           <div class="card shadow-sm bg-body rounded">
             <div class="card-header shadow-sm bg-body rounded" style="background-color: white;">
-              <div class="card-title ps-3 fw-bold">Form Tambah Ahli</div>
+              <div class="card-title ps-3 fw-bold">Form Tambah FAQ</div>
             </div>
             <div class="card-body">
 
+
               <div class="row">
                 <div class="mb-3 pe-5 ps-5">
-                  <label for="id_ahli" class="form-label">ID Ahli</label>
-                  <input type="text" class="form-control" id="id_ahli" name="id_ahli" value="<?php echo generateRandomString(8); ?>" readonly>
-                </div>
-
-
-                <div class="mb-3 pe-5 ps-5">
-                  <label for="nama_ahli" class="form-label">Nama</label>
-                  <input type="text" class="form-control" id="nama_ahli" name="nama_ahli" placeholder="">
+                  <label for="id_faq_ahli" class="form-label">ID FAQ</label>
+                  <input type="text" class="form-control" id="id_faq_ahli" name="id_faq_ahli" value="<?php echo generateRandomString(8); ?>" readonly>
                 </div>
 
                 <div class="mb-3 pe-5 ps-5">
-                  <label for="nip" class="form-label">NIP</label>
-                  <input type="text" class="form-control" id="nip" name="nip" placeholder="">
-                </div>
 
-                <div class="mb-3 pe-5 ps-5">
-                  <label for="jabatan" class="form-label">Jabatan</label>
-                  <input type="text" class="form-control" id="jabatan" name="jabatan" placeholder="">
-                </div>
+                  <select class="form-select" aria-label="Default select example" id="id_ahli" name="id_ahli" required>
+                    <option selected>Pilih Ahli</option>
 
-                <div class="mb-3 pe-5 ps-5">
-                  <label for="contact" class="form-label">Contact</label>
-                  <input type="text" class="form-control" id="contact" name="contact" placeholder="">
-                </div>
+                    <?php
+                    while ($user_data = pg_fetch_array($result)) {
+                    ?>
+                      <option value="<?php echo $user_data['id_ahli'] ?>"><?php echo $user_data['nama_ahli'] ?></option>
 
-                <div class="mb-3 pe-5 ps-5">
-                  <label for="jam_available" class="form-label">Jam Available</label>
-                  <input type="text" class="form-control" id="jam_available" name="jam_available" placeholder="">
-                </div>
+                    <?php
+                    }
+                    ?>
+                  </select>
 
 
-                <div class="mb-3 pe-5 ps-5">
-                  <label for="foto" class="form-label">Foto</label>
-                  <input type="file" class="form-control" id="foto" name="foto">
+                
                 </div>
 
-                <div class="mb-3 pe-5 ps-5">
-                  <label for="video" class="form-label">Video</label>
-                  <p class="text-black-50">"Min Upload : 5MB & Maks Upload 45MB"</p>
-                  <input type="file" class="form-control" id="video" name="video">
-                </div>
 
 
                 <div class="mb-3 pe-5 ps-5">
-                  <label for="deskripsi_ahli" class="form-label">Deskripsi Ahli</label>
-                  <textarea class="form-control" id="deskripsi_ahli" name="deskripsi_ahli" rows="3"></textarea>
+                  <label for="pertanyaan" class="form-label">Pertanyaan</label>
+                  <input type="text" class="form-control" id="pertanyaan" name="pertanyaan" placeholder="">
                 </div>
-
 
                 <div class="mb-3 pe-5 ps-5">
-                  <label for="profil_singkat" class="form-label">Profil Singkat</label>
-                  <textarea class="form-control" id="profil_singkat" name="profil_singkat" rows="3"></textarea>
+                  <label for="jawaban" class="form-label">jawaban</label>
+                  <textarea class="form-control" id="jawaban" name="jawaban" rows="3"></textarea>
                 </div>
-
-
-
 
                 <div class="field " style="display: flex; justify-content: flex-start; ">
                   <button type="submit" name="tambah" class="btn btn-success ps-4 pe-4">Submit</button>
                 </div>
 
-              </div>
 
+              </div>
 
             </div>
 
           </div>
-
         </div>
       </div>
+  </div>
 
-      </form>
+  </div>
+
+
+
+  </form>
   </div>
 
 

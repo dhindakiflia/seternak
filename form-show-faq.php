@@ -25,9 +25,9 @@
   include('layout/admin-navbar.php');
   include('koneksi.php');
 
-  if (isset($_GET['id_ahli'])) {
-    $id_ahli = $_GET['id_ahli'];
-    $sql = pg_query("SELECT * FROM ahli where id_ahli='" . $id_ahli . "'");
+  if (isset($_GET['id_faq'])) {
+    $id_faq = $_GET['id_faq'];
+    $sql = pg_query("SELECT * FROM public.faq_seternak where id_faq='" . $id_faq . "'");
     $user_data = pg_fetch_array($sql);
 
   ?>
@@ -51,13 +51,13 @@
 
   <div class="container-lg mt-5">
 
-    <form action="function/edit-ahli.php" method="post" enctype="multipart/form-data">
+    <form action="function/edit-faq.php" method="post" enctype="multipart/form-data">
 
       <div class="row">
         <div class="col-md-12 mt-5 mb-5">
           <div class="card shadow-sm bg-body rounded">
             <div class="card-header shadow-sm bg-body rounded" style="background-color: white;">
-              <div class="card-title ps-3 fw-bold">Form Detail Ahli</div>
+              <div class="card-title ps-3 fw-bold">Form Detail faq</div>
             </div>
             <div class="card-body">
 
@@ -65,70 +65,24 @@
               <div class="row">
 
                 <div class="mb-3 pe-5 ps-5">
-                  <label for="id_ahli" class="form-label">ID Ahli</label>
-                  <input type="text" class="form-control" id="id_ahli" name="id_ahli" value="<?php echo $user_data['id_ahli']; ?>" disabled>
+                  <label for="id_faq" class="form-label">ID faq</label>
+                  <input type="text" class="form-control" id="id_faq" name="id_faq" value="<?php echo $user_data['id_faq']; ?>" disabled>
                 </div>
 
 
 
                 <div class="mb-3 pe-5 ps-5">
-                  <label for="nama_ahli" class="form-label">Nama</label>
-                  <input type="text" class="form-control" id="nama_ahli" name="nama_ahli" value="<?php echo $user_data['nama_ahli']; ?>" disabled>
+                  <label for="pertanyaan" class="form-label">Pertanyaan</label>
+                  <input type="text" class="form-control" id="pertanyaan" name="pertanyaan" value="<?php echo $user_data['pertanyaan']; ?>" disabled>
                 </div>
-
-                <div class="mb-3 pe-5 ps-5">
-                  <label for="nip" class="form-label">NIP</label>
-                  <input type="text" class="form-control" id="nip" name="nip" value="<?php echo $user_data['nip']; ?>" disabled>
-                </div>
-
-                <div class="mb-3 pe-5 ps-5">
-                  <label for="jabatan" class="form-label">Jabatan</label>
-                  <input type="text" class="form-control" id="jabatan" name="jabatan" value="<?php echo $user_data['jabatan']; ?>" disabled>
-                </div>
-
-                <div class="mb-3 pe-5 ps-5">
-                  <label for="contact" class="form-label">Contact</label>
-                  <input type="text" class="form-control" id="contact" name="contact" value="<?php echo $user_data['contact']; ?>" disabled>
-                </div>
-
-                <div class="mb-3 pe-5 ps-5">
-                  <label for="jam_available" class="form-label">Jam Available</label>
-                  <input type="text" class="form-control" id="jam_available" name="jam_available" value="<?php echo $user_data['jam_available']; ?>" disabled>
-                </div>
-
-
-                <div class="mb-3 pe-5 ps-5">
-                  <label for="foto" class="form-label">Foto</label>
-                  <div>
-                    <img src="upload/<?php echo $user_data['foto']; ?>" alt="" style="width: 100px;height:100px;">
-                  </div>
-
-                </div>
-
-                <div class="mb-3 pe-5 ps-5">
-                  <label for="video" class="form-label"> Video</label>
-                  <div>
-                    <video id="video" width="250" height="200" controls>
-                      <source src="video_upload/<?php echo $user_data['video']; ?>">
-                    </video>
-                  </div>
-
-                </div>
-
 
               
 
                 <div class="mb-3 pe-5 ps-5">
-                  <label for="deskripsi_ahli" class="form-label">Deskripsi Ahli</label>
-                  <textarea class="form-control" id="deskripsi_ahli" name="deskripsi_ahli" rows="3" disabled><?php echo $user_data['deskripsi_ahli']; ?></textarea>
+                  <label for="jawaban" class="form-label">Jawaban</label>
+                  <textarea class="form-control" id="jawaban" name="jawaban" rows="3" disabled><?php echo $user_data['jawaban']; ?></textarea>
                 </div>
-             
-
-              <div class="mb-3 pe-5 ps-5" style="padding-right: 10px;">
-                <label for="profil_singkat" class="form-label">Profil Singkat</label>
-                <textarea class="form-control" id="profil_singkat" name="profil_singkat" rows="3" disabled><?php echo $user_data['profil_singkat']; ?></textarea>
-              </div>
-
+      
               
             </div>
             

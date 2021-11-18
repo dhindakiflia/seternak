@@ -193,11 +193,12 @@
 
   <?php
 
-  include('layout/admin-navbar.php');
+  
   include('koneksi.php');
 
   if (isset($_GET['username'])) {
-    $username = $_GET['username'];
+    $username = 'nishia';
+    // $username = $_GET['username'];
     $sql = pg_query("SELECT * FROM public.user where username='" . $username . "'");
     $user_data = pg_fetch_array($sql);
 
@@ -217,7 +218,7 @@
 
 <body>
   <!-- Navbar -->
-
+ <?php include('layout/admin-navbar.php'); ?>
   <!-- Navbar -->
 
 
@@ -320,7 +321,7 @@
               </div>
 
               <div class="field " style="display: flex; justify-content: flex-start; ">
-                <a href="form-edit-profile.php?username=<?php echo $user_data['username']; ?>"><button class="btn btn-success ps-4 pe-4">Edit Profil</button>
+                <a href="form-edit-profile-admin.php?username=<?php echo $user_data['username']; ?>"><button class="btn btn-success ps-4 pe-4">Edit Profil</button>
                 </a>
 
               </div>

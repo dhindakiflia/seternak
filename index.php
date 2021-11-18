@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,56 +20,58 @@
 
 
     <title>Seternak</title>
-  </head>
-  <body id="home">
+</head>
 
-  <!-- Navbar -->
-  <?php 
+<body id="home">
+
+    <!-- Navbar -->
+    <?php
     include('layout/unlogin-navbar.php');
-  ?>
-  <!-- Navbar -->
+    include 'koneksi.php';
+    ?>
+    <!-- Navbar -->
 
-<!-- Jumbotron -->
-<section id="jumbotron_home" class="jumbotron" style="padding-top:150px;padding-bottom:100px" class="img-fluid">
-<div class="container">
-  <div class="row">
-    <div id="hero" class="col-md-4" style="margin-left:190px" >
-        <h1 class="display-2 text-light bold fw-bold" class="responsive-font-example">Seternak</h1>
-        <p class="lead text-light">Aplikasi yang mengintegrasikan kegiatan peternak dengan fitur mentoring, forum, marketplace, dan info</p> 
-        <div class="d-flex">
-                <button type="button" class="btn btn-light mx-1 text-success shadow">Daftar</button>
-                <button type="button" class="btn btn-success mx-1 hijau shadow">Masuk</button>
+    <!-- Jumbotron -->
+    <section id="jumbotron_home" class="jumbotron" style="padding-top:150px;padding-bottom:100px" class="img-fluid">
+        <div class="container">
+            <div class="row">
+                <div id="hero" class="col-md-4" style="margin-left:190px">
+                    <h1 class="display-2 text-light bold fw-bold" class="responsive-font-example">Seternak</h1>
+                    <p class="lead text-light">Aplikasi yang mengintegrasikan kegiatan peternak dengan fitur mentoring, forum, marketplace, dan info</p>
+                    <div class="d-flex">
+                        <button type="button" class="btn btn-light mx-1 text-success shadow">Daftar</button>
+                        <button type="button" class="btn btn-success mx-1 hijau shadow">Masuk</button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-  </div>
-</div>
-</section>
-<!-- Jumbotronend -->
+    </section>
+    <!-- Jumbotronend -->
 
-<!-- Tujuan Seternak -->
-<section id="tujuan">
-    <div class="container py-5">
-        <div class="row px-4 justify-content-center">
-            <div id="list" class="col-md-6 py-3" >
-                <h2>Tujuan Seternak</h2>
-                <ul class="list-unstyled">
-                    <li>Memberikan pemahaman baru kepada peternak dari pakar ahli</li>
-                    <li>Memungkinkan semua peternak dapat terhubung secara realtime</li>
-                    <li>Efektifitas proses sosialisasi peternak kepada khalayak terkait produktifitas kerja</li>
-                    <li>Membantu peternak dalam memasarkan hasil ternak desa secara lebih luas</li>
-                </ul>
+    <!-- Tujuan Seternak -->
+    <section id="tujuan">
+        <div class="container py-5">
+            <div class="row px-4 justify-content-center">
+                <div id="list" class="col-md-6 py-3">
+                    <h2>Tujuan Seternak</h2>
+                    <ul class="list-unstyled">
+                        <li>Memberikan pemahaman baru kepada peternak dari pakar ahli</li>
+                        <li>Memungkinkan semua peternak dapat terhubung secara realtime</li>
+                        <li>Efektifitas proses sosialisasi peternak kepada khalayak terkait produktifitas kerja</li>
+                        <li>Membantu peternak dalam memasarkan hasil ternak desa secara lebih luas</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="assets/ayam.jpg" style="width:115px; height:163px;">
+
+                </div>
             </div>
-            <div class="col-md-3 text-center">
-            <img src="assets/ayam.jpg" style="width:115px; height:163px;">
-            
-            </div>
-        </div>    
-    </div>
-</section>
-<!-- Tujuanseternakend -->
+        </div>
+    </section>
+    <!-- Tujuanseternakend -->
 
 
-<!-- bagaimanahijau -->
+    <!-- bagaimanahijau -->
     <section id="bagaimana" class="hijau">
         <br><br><br>
         <div class="container">
@@ -102,10 +105,10 @@
         </div>
         <br><br>
     </section>
-<!-- bagaimanahijauend -->
+    <!-- bagaimanahijauend -->
 
-<!-- slider -->
-<!-- <section class="putih">
+    <!-- slider -->
+    <!-- <section class="putih">
     <div class="container"><br><br><br>
         <div class="row">
             <div class="col-md-12">
@@ -205,10 +208,10 @@
     </div>
     <br><br><br><br>
 </section> -->
-<!-- sliderend -->
+    <!-- sliderend -->
 
 
-<!-- <section>
+    <!-- <section>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -283,8 +286,8 @@
     </div>
 </section> -->
 
-<!-- Courasel -->
-<!-- <section id="slider" class="pt-5">
+    <!-- Courasel -->
+    <!-- <section id="slider" class="pt-5">
   <div class="container">
     <h1 class="text-center"><b>Responsive Owl Carousel</b></h1>
 	  <div class="slider">
@@ -328,112 +331,103 @@
 			</div>
   </div>
 </section> -->
-<!-- Couraselend -->
+    <!-- Couraselend -->
 
 
-<!-- Tahukahkamu -->
-<section id="tahukahkamu">
-    <br><br>
-    <div class="container text-start">
-        <h1 class="mb-4 text-center">Tahukah Kamu</h1>
-        <div class="row">
-            <div class="owl-carousel owl-theme">
-                <div id="item" class="item ">
-                    <div class="card shadow-sm" style="width: 15rem;">
-                        <img src="assets/fakta1.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title text-start font-hijau">Fakta Anak Ayam</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <!-- Tahukahkamu -->
+    <section id="tahukahkamu">
+        <br><br>
+        <div class="container text-start">
+            <h1 class="mb-4 text-center">Tahukah Kamu</h1>
+            <div class="row">
+                <div class="owl-carousel owl-theme">
+                    <div id="item" class="item ">
+                        <div class="card shadow-sm" style="width: 15rem;">
+                            <img src="assets/fakta1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title text-start font-hijau">Fakta Anak Ayam</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div id="item" class="item ">
-                    <div class="card shadow-sm" style="width: 15rem;">
-                        <img src="assets/fakta2.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title text-start font-hijau">Kehidupan Ayam Kampung</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div id="item" class="item ">
+                        <div class="card shadow-sm" style="width: 15rem;">
+                            <img src="assets/fakta2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title text-start font-hijau">Kehidupan Ayam Kampung</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div id="item" class="item ">
-                    <div class="card shadow-sm" style="width: 15rem;">
-                        <img src="assets/fakta3.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title text-start font-hijau">Produksi Telur Ayam</h5>
-                            <p class="card-text fs-7 text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div id="item" class="item ">
+                        <div class="card shadow-sm" style="width: 15rem;">
+                            <img src="assets/fakta3.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title text-start font-hijau">Produksi Telur Ayam</h5>
+                                <p class="card-text fs-7 text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div id="item" class="item ">
-                    <div class="card shadow-sm" style="width: 15rem;">
-                        <img src="assets/fakta3.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title text-start font-hijau">5 Fakta Ayam</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div id="item" class="item ">
+                        <div class="card shadow-sm" style="width: 15rem;">
+                            <img src="assets/fakta3.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title text-start font-hijau">5 Fakta Ayam</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <br><br>
-</section>
-<!-- Tahukahkamuend -->
+        <br><br>
+    </section>
+    <!-- Tahukahkamuend -->
 
 
 
-<!-- FAQ -->
-<section class="faq p-4" >
-  <h1 class=" mb-5  text-center" class="responsive-font-example">Frequently Asked Questions</h1>
-  <div class="container accordion accordion-flush justify-content-center " id="accordionFlushExample" style="max-width: 50rem;">
+    <!-- FAQ -->
+    <section class="faq p-4">
+        <h1 class=" mb-5  text-center" class="responsive-font-example">Frequently Asked Questions</h1>
+        <div class="container accordion accordion-flush justify-content-center " id="accordionFlushExample" style="max-width: 50rem;">
 
-  <div class="accordion-item mb-3 shadow mb-3 bg-white rounded">
-    <h2 class="accordion-header" id="flush-headingOne">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-      </button>
-    </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam incidunt velit quas dolorem? Fugiat assumenda sint cumque alias saepe est a, dolorem minus. Amet, dolor. Fugit dolorum voluptatibus labore perspiciatis.</div>
-    </div>
-  </div>
+            <?php
+            $i = 0;
+            $result = pg_query($conn, "SELECT * FROM faq_seternak");
+            while ($user_data = pg_fetch_array($result)) {
+            ?>
 
-  <div class="accordion-item mb-3 shadow mb-3 bg-white rounded">
-    <h2 class="accordion-header" id="flush-headingTwo">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </button>
-    </h2>
-    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quos, fugit laudantium neque iure sapiente quo at aut similique consequuntur veritatis libero placeat culpa debitis qui perspiciatis. Vero, suscipit quibusdam. </div>
-  </div>
-  </div>
+                <div class="accordion-item mb-3 shadow mb-3 bg-white rounded">
+                    <h2 class="accordion-header" id="flush-headingOne<?php echo $user_data['id_faq']; ?>">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne<?php echo $user_data['id_faq']; ?>" aria-expanded="false" aria-controls="flush-collapseOne<?php echo $user_data['id_faq']; ?>">
+                        <?php echo $user_data['pertanyaan']; ?>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne<?php echo $user_data['id_faq']; ?>" class="accordion-collapse collapse" aria-labelledby="flush-headingOne<?php echo $user_data['id_faq']; ?>" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body"><?php echo $user_data['jawaban']; ?></div>
+                    </div>
+                </div>
 
 
-  <div class="accordion-item mb-5 shadow mb-3 bg-white rounded">
-    <h2 class="accordion-header" id="flush-headingThree">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      </button>
-    </h2>
-    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, suscipit quae. Provident, quae? Id alias sit, cupiditate repudiandae ratione incidunt molestiae ut nobis, earum quae dolore non in explicabo est. </div>
-  </div>
-  </div>
-
-  </div>
-</section>
-<!-- FAQend -->
+            <?php
+            }
+            ?>
 
 
-<!-- Ayo Bergabung Dengan Kami -->
-<?php include('layout/ayobergabung.php'); ?>
-<!-- Ayo bergabung end -->
 
-<!-- Footer -->
-<?php include('layout/footer.php'); ?>
-<!-- Footer end -->
+
+        </div>
+    </section>
+    <!-- FAQend -->
+
+
+    <!-- Ayo Bergabung Dengan Kami -->
+    <?php include('layout/ayobergabung.php'); ?>
+    <!-- Ayo bergabung end -->
+
+    <!-- Footer -->
+    <?php include('layout/footer.php'); ?>
+    <!-- Footer end -->
 
 
 
@@ -460,9 +454,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script> 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" ></script>
-	<!-- <script src="js/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" ></script> -->
+    <!-- <script src="js/owl.carousel.min.js"></script>
 	<script src="js/script.js"></script> -->
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -473,22 +467,23 @@
     <!-- init owl caueasel -->
     <script>
         $('.owl-carousel').owlCarousel({
-            loop:true,
-            margin:10,
-            nav:true,
-            responsive:{
-                0:{
-                    items:1
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
                 },
-                600:{
-                    items:3
+                600: {
+                    items: 3
                 },
-                1000:{
-                    items:5
+                1000: {
+                    items: 5
                 }
             }
         })
     </script>
-    
-  </body>
+
+</body>
+
 </html>
