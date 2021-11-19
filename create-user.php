@@ -2,16 +2,15 @@
 session_start();
 require('function-user.php');
 $obj = new Db_Class();
-// $id = $_POST['username'];
-// $query ="select * from user WHERE username = '$id' ";
-// $cekid =  pg_affected_rows(pg_query($query));
+$error = '';
 
 if (isset($_POST['submit']) and !empty($_POST['submit'])){
-    
-    // if($cekid>0){
-    //     echo '<script>'; 
-    //     echo 'alert("Username sudah digunakan!");'; 
-    // }else{
+    $uname = $_POST['username'];
+    $query =pg_query($dbconn,"SELECT * FROM public.user WHERE username='$uname'");
+    $cekid =  pg_affected_rows($query);
+    if($cekid!=0){
+        $error =  'Username sudah digunakan !!';
+    }else{
         $ret_val = $obj->createUser();
         if($ret_val==1){
         echo '<script>'; 
@@ -23,11 +22,11 @@ if (isset($_POST['submit']) and !empty($_POST['submit'])){
         }
         
         echo '</script>';
-        // }
+        }
     }
 }
 
-?>
+?> 
 <!doctype html>
 <html lang="en">
   <head>
@@ -62,7 +61,9 @@ if (isset($_POST['submit']) and !empty($_POST['submit'])){
             <h5 class="card-header">Form Tambah User/Partner</h5>
             <div class="card-body">
                 <!-- <h5 class="card-title">Special title treatment</h5> -->
-            
+                <?php if($error != ''){ ?>
+                        <div class="alert alert-danger" role="alert"><?= $error; ?></div>
+                    <?php } ?>    
                 <!-- formulir-user -->
         <form action="" method="post">
             <div class="container">
@@ -87,6 +88,7 @@ if (isset($_POST['submit']) and !empty($_POST['submit'])){
                     <select class="form-select" aria-label="Default select example" name="role" require>
                         <option value="1" >User</option>
                         <option value="2">Partner</option>
+                        <option value="3">Admin</option>
                     </select>
                 </div>
                 <div class="mb-3">

@@ -1,5 +1,8 @@
 <?php
  session_start();
+ if($_SESSION['role']!="3"){
+    header("location:login.php?pesan=gagal");
+}
  require('function-user.php');
  $obj = new Db_Class();
 
@@ -60,10 +63,10 @@
                             <label for="exampleFormControlInput1" class="form-label">Email address</label>
                             <input type="text" class="form-control" value= "<?=$user->email?>" name="email" >
                         </div>
-                        <div class="mb-3">
+                        <!-- <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Password</label>
                             <input type="password" class="form-control" name="password" value= "<?=$user->password?>">
-                        </div>
+                        </div> -->
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Role</label>
                             <select class="form-select" aria-label="Default select example" name="role">

@@ -1,5 +1,8 @@
 <?php
     session_start();
+    if($_SESSION['role']!="3"){
+		header("location:login.php?pesan=gagal");
+	}
     require('function-user.php');
     $obj = new Db_Class();
 
@@ -67,8 +70,10 @@
             </div>
             <div class="card-body">
                 <!-- <h5 class="card-title">Ini User</h5> -->
+                <div class="table-responsive">
                 <a class="btn btn-success" style="float:right;margin-bottom:2%;" href="create-user.php" ><i class="fa fa-plus"></i> Tambah</a>
-
+                </div>
+                <div class="table-responsive">
                 <table class="table table-hover" >
                     <thead>
                         <tr>
@@ -109,7 +114,7 @@
                     </tbody>
                 
                 </table>
-
+                </div>
             </div>
         </div>
     </div> 
