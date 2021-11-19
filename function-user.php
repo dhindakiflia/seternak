@@ -4,11 +4,12 @@ include_once("config.php");
 class Db_Class{
     private $table_name = 'user';
         function createUser(){
+            $hashPasswd = password_hash($_POST['password'], PASSWORD_DEFAULT);
             $query = "INSERT INTO PUBLIC.".$this->table_name."(name,username,email,password,role,contact,kota,alamat) ".
             "VALUES('".$this->cleanData($_POST['name'])."',
             '".$this->cleanData($_POST['username'])."',
             '".$this->cleanData($_POST['email'])."',
-            '".$this->cleanData($_POST['password'])."',
+            '".$this->cleanData($hashPasswd)."',
             '".$this->cleanData($_POST['role'])."',
             '".$this->cleanData($_POST['contact'])."',
             '".$this->cleanData($_POST['kota'])."',
@@ -47,7 +48,6 @@ class Db_Class{
      
         $sql = "update public.user set name='".$this->cleanData($_POST['name'])."'
         ,email='".$this->cleanData($_POST['email'])."'
-        ,password='".$this->cleanData($_POST['password'])."'
         ,role='".$this->cleanData($_POST['role'])."'
         ,contact='".$this->cleanData($_POST['contact'])."'
         ,kota='".$this->cleanData($_POST['kota'])."'
@@ -57,6 +57,7 @@ class Db_Class{
     function cleanData($val){
          return pg_escape_string($val);
     }
+
 }
 
 
